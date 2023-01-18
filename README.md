@@ -9,7 +9,7 @@
 
 # To-do
 
-* [ ] Create the basic app
+* [ x ] Create the basic app
 * [ ] call the tmdb api(I am gonna generate random new theme everytime the page loads)
     * [ ] Generate a Random image everytime the page loads
     * [ ] Make that image the background of the first page
