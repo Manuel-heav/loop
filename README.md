@@ -6,7 +6,7 @@
 
 #### better UI and features!
 
-
+#### FYI this is the app to track movies, LOOP(Let's Officially Over Procrastinate)
 # To-do
 
 * [x] Create the basic app
