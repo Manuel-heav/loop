@@ -10,4 +10,10 @@
 # To-do
 
 * [ ] Create the basic app
-* [ ] Create the basic app
+* [ ] call the tmdb api(I am gonna generate random new theme everytime the page loads)
+    * [ ] Generate a Random image everytime the page loads
+    * [ ] Make that image the background of the first page
+* [ ] Create the form
+* [ ] set up firebase and firestore
+* [ ] set authentication for only two people
+* [ ] work on each individual item
