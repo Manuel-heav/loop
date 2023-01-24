@@ -20,8 +20,7 @@ const Showcase = () => {
     const backImg = base_img_url + image;
     
   return (  
-    <div className="showcase">
-        <img src={backImg} alt="" />
+    <div className="showcase" style={{background: `src(${backImg})`}}>
     </div>
   )
 }
