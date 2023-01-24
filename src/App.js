@@ -1,12 +1,14 @@
 import './app.css'
-import Header from './Header';
 import Main from './Main';
+import Showcase from './Showcase';
 
 function App() {
   return (
     <div className="app">
-        <Header />
-        <Main />
+        <div className="app__main__container">
+          <Main />
+          <Showcase />
+        </div>
     </div>
   );
 }
