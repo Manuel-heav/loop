@@ -24,16 +24,14 @@ function App() {
     const backImg = base_img_url + image;
 
     const myStyle={
-      backgroundImage:"url('https://media.geeksforgeeks.org/wp-content/uploads/rk.png')",
-      height:'100vh',
-      marginTop:'-70px',
-      fontSize:'50px',
+      backgroundImage:`url('${backImg}')`,
       backgroundSize: 'cover',
+      backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
   };
   
   return (
-    <div className="app" style={{myStyle}}>
+    <div className="app" style={myStyle}>
           <Main />
     </div>
   );
