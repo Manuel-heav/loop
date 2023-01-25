@@ -11,10 +11,12 @@ const Main = () => {
   const base_img_url = "https://image.tmdb.org/t/p/w500"
   const API_URL = base_url + "/discover/movie?sort_by=popularity.desc&"+api_key 
 
-  const mainUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${title}`  
-
-  const findAndAdd = () => {
-    console.log(title)
+  
+  const findAndAdd = async () => {
+    const mainUrl = `https://api.themoviedb.org/3/search/movie?${api_key}&query=${title}`  
+    const data = await fetch(mainUrl);
+    const movie = await data.json();
+    console.log(movie);
   }
   return (
    <div className="antialiased  text-white-600 p-5">
