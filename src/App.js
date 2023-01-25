@@ -22,16 +22,9 @@ function App() {
     }, [API_URL]);
 
     const backImg = base_img_url + image;
-
-    const myStyle={
-      backgroundImage:`url('${backImg}')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-  };
   
   return (
-    <div className="app" style={myStyle}>
+    <div className="app">
           <Main />
     </div>
   );

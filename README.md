@@ -15,5 +15,4 @@
     * [x] Make that image the background of the first page
 * [x] Create the form
 * [ ] set up firebase and firestore
-* [ ] set authentication for only two people
-* [ ] work on each individual item(Movie Card)
+* [ ] work on each individual item(Movie Card)s
