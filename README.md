@@ -16,3 +16,10 @@
 * [x] Create the form
 * [ ] set up firebase and firestore
 * [ ] work on each individual item(Movie Card)s
+
+* [ ] Make it so we dont have to use videoURl, use the api used on Bmovies
+* [ ] Add a checker to check if the movie is watched
+* [ ] Update the UI a bit (Dark Mode)
+* [ ] Get rid of Description
+* [ ] Order movies with alphabet
+* [ ] Modify twss counts 😉
