@@ -19,7 +19,7 @@
 
 * [ ] Make it so we dont have to use videoURl, use the api used on Bmovies
 * [ ] Add a checker to check if the movie is watched
-* [ ] Update the UI a bit (Dark Mode)
+* [x] Update the UI a bit (Dark Mode)
 * [ ] Get rid of Description
 * [ ] Order movies with alphabet
 * [ ] Modify twss counts 😉

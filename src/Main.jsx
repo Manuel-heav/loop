@@ -4,7 +4,9 @@ import './main.css'
 const Main = () => {
 
   const [title, setTitle] = useState("")
+  const [image, setImage] = useState("")
   const [username, setUsername] = useState("")
+  const [desc, setDesc] = useState("")
 
   const api_key = "api_key=9f02a73a699c175c26914cfc4ef6968e"
   const base_url = "https://api.themoviedb.org/3"
@@ -16,11 +18,14 @@ const Main = () => {
     const mainUrl = `https://api.themoviedb.org/3/search/movie?${api_key}&query=${title}`  
     const data = await fetch(mainUrl);
     const movie = await data.json();
-    console.log(movie);
+    setDesc(movie?.results[0]?.overview)
+    setImage(movie?.results[0]?.poster_path)
   }
+  const imgUrl = base_img_url + image;
   return (
    <div className="antialiased  text-white-600 p-5">
     <h1 className="text-4xl font-bold mb-6">LOOP</h1>
+   {/* //Generate Romantic Quotes here  */}
             <div x-show="card">
   <div className="space-y-4">
 
@@ -41,8 +46,10 @@ const Main = () => {
     <div className="mb-4">
       <button onClick={findAndAdd}className="font-medium text-sm inline-flex items-center justify-center px-3 py-2 border border-transparent rounded leading-5 shadow-sm transition duration-150 ease-in-out w-full bg-indigo-500 hover:bg-indigo-600 text-white focus:outline-none focus-visible:ring-2">Add to LOOP</button>
     </div>
-    <div className="text-xs text-white-500 italic text-center">Reminder: You'll be Sacrificing 1:30:00 - 3:00:00 of your life</div>
-    <div className="text-xs text-white-500 italic text-center">Twss Count, Aman: 3.5k, Betsi: 244</div>
+    {/* <div className="text-xs text-white-500 italic text-center">Reminder: You'll be Sacrificing 1:30:00 - 3:00:00 of your life</div>
+    <div className="text-xs text-white-500 italic text-center">Twss Count, Aman: 3.5k, Betsi: 244</div> */}
+   <p>{desc}</p>
+    <img src={imgUrl}/>
   </div>
 </div>
     </div>
