@@ -19,6 +19,8 @@ const Main = () => {
     const mainUrl = `https://api.themoviedb.org/3/search/movie?${api_key}&query=${title}`  
     const data = await fetch(mainUrl);
     const movie = await data.json();
+    // const trailerUrl = await movieTrailer(title);
+    // console.log(trailerUrl);
     // const Num = movie.results.length;
     setDesc(movie?.results[num]?.overview);
     setTrailerUrl(movie?.results[num]?.poster_path);
@@ -38,6 +40,7 @@ const Main = () => {
       genre: genre,
     })
     alert("Movie added successfully")
+    window.location.reload();
   }
   const imgUrl = base_img_url + trailerUrl;
 
