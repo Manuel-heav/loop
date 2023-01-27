@@ -5,6 +5,7 @@ import { db } from './Firebase';
 const Main = () => {
 
   const [title, setTitle] = useState("")
+  const [num, setNum] = useState(0)
   const [trailerUrl, setTrailerUrl] = useState("")
   const [username, setUsername] = useState("")
   const [desc, setDesc] = useState("")
@@ -14,15 +15,17 @@ const Main = () => {
   const base_img_url = "https://image.tmdb.org/t/p/w500"
   const API_URL = base_url + "/discover/movie?sort_by=popularity.desc&"+api_key 
 
-  
   const findMovie = async (e) => {
     const mainUrl = `https://api.themoviedb.org/3/search/movie?${api_key}&query=${title}`  
     const data = await fetch(mainUrl);
     const movie = await data.json();
-    setDesc(movie?.results[0]?.overview);
-    setTrailerUrl(movie?.results[0]?.poster_path);
-    console.log(movie)
-    alert("Movie added successfully");
+    // const Num = movie.results.length;
+    setDesc(movie?.results[num]?.overview);
+    setTrailerUrl(movie?.results[num]?.poster_path);
+    setNum(num + 1);
+    if(num === movie.results.length){
+      alert("No more movies to fetch, please reload and try again.")
+    }
   }
 
   const addMovie = (e) => {
@@ -32,6 +35,7 @@ const Main = () => {
       title: title ,
       trailerUrl: trailerUrl,
       username: username,
+      genre: genre,
     })
     alert("Movie added successfully")
   }
