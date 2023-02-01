@@ -40,7 +40,6 @@ const Main = () => {
       genre: genre,
     })
     alert("Movie added successfully")
-    window.location.reload();
   }
   const imgUrl = base_img_url + trailerUrl;
 

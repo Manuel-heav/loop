@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import YouTube from 'react-youtube-embed';
-import movieTrailer from 'movie-trailer'
+import movieTrailer from 'movie-trailer';
 import { useEffect } from 'react';
 
 
